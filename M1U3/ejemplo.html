@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer html</title>
+</head>
+<body>
+    <!--h1> se puede utilizar solo 1 vez por html-->
+    <!--esto es un comentario en HTML-->
+    <!-- . -->
+    <h1>encabezado 1</h1>
+    <h2>encabezado 2</h2>
+    <h3>encabezado 3</h3>
+    <!-- <h4>encabezado 4</h4> -->
+    <h5>encabezado 5</h5>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur animi ratione voluptatem eligendi vel nulla quaerat possimus harum dolorem, repudiandae excepturi, itaque perspiciatis qui nam ipsa quam. Adipisci, soluta obcaecati?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+       Consectetur ipsam fugiat expedita autem. Quibusdam minima quisquam adipisci ab dolorum error tempora dolor nostrum quos,
+       beatae eveniet aperiam commodi, quo repellat.</p>
+    <ul>
+        <li>Abrir archivo</li>
+        <li>Instalar</li>
+        <li>Seleccionar ruta</li>
+    </ul>
+    <ol>
+            <li>Colocar Harina en bowl</li>
+            <li>Agregar Azucar</li>
+            <li>Agregar huevos</li>
+            <li>Colocar materia grasa</li>
+    </ol>
+    <h3>ejemplo para vincular</h3>
+    <p>Para insertar un link en un texto HTML se utiliza el comando < A  > (de anchor).
+    <p>Este comando tiene modificadores, es decir, no basta con colocar el comando, es necesario especificarle ciertos parámetros.</p>
+    <p>de estos parámetros es HREF con el cual le indicamos 
+        hacia dónde debe seguir el link ej: 
+        <a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks" target="_blank">
+            PRESIONE AQUÍ</a>.</p>
+
+
+    <h3>Ejemplo imagenes</h3>
+    <img src="UAPs.jpg" alt="Unidentified Aerial Phenomena">
+    <img src="img/Annunaki.jpg" alt="Dioses Sumerior">
+    
+    
+    <h3>Etiquetas Gráficos vectoriales escalables (SVG)</h3>
+    <svg width="100" height="100">
+    <circle cx="50" cy="50" stroke="green" stroke-width="4" fill="red" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg"
+     width="150" height="100" viewBox="0 0 3 2">
+
+        <rect width="1" height="2" x="0" fill="#008d46" />
+        <rect width="1" height="2" x="1" fill="#ffffff" />
+        <rect width="1" height="2" x="2" fill="#d2232c" />
+    </svg>
+
+
+    <h3>Ejemplo etiqueta < div ></h3>
+    <div>
+        <h2>Fragmento anecdota Paranormal</h2>
+        <p>Entonces sentí una mano que me agarraba la parte de atrás de la camiseta, lo suficientemente fuerte para que yo dejase de caminar,</p>
+        <p>de repente sentí otra mano muy diferente a la otra que tiraba hacia atrás de la cortina que tenía puesta sobre la cara,</p>
+        <p>dejando ver que yo estaba justo en el borde de las escaleras, a punto de caer.</p>
+        
+    </div>
+
+    <h3>Etiqueta de audio</h3>
+    <audio src="D:\MarCris\Music\Zildjian Live! - Larnell Lewis .mp3" controls></audio>
+    <h3>ETIQUETA DE VIDEO</h3>
+    <video src="D:\MarCris\Videos\Experimentos de ciencia caseros.mp4" poster="imagen.jpg" controls></video>
+
+    <form>
+        <!--Etiqueta fieldset-->
+        <fieldset>
+            <!--Etiqueta legend-->
+            <legend>Datos personales</legend>
+            <!--Etiqueta label-->
+            <label>Nombre y apellidos: </label>
+            <!--Etiqueta input tipo texto-->
+            <input name='nombre' type='text'/><br>
+            <label>Sexo: </label>
+            <!--Etiqueta select-->
+            <select name="select">
+                <!--Etiqueta option-->
+                <option value="value1">Hombre</option> 
+                <option value="value2" selected>Mujer</option>
+            </select><br><br>
+            <label>Edad: </label>
+            <!--Etiqueta input tipo checkbox-->
+            <input type='checkbox' name='edad' value='20-39' /> 20-39
+            <input type='checkbox' name='edad' value='40-59' /> 40-59
+            <input type='checkbox' name='edad' value='60-79' /> 60-79<br><br>
+            <label>Email: </label>
+            <!--Etiqueta input tipo email-->
+            <input name='nombre' type='email'/><br><br>
+            <label>Estudios: </label>
+            <!--Etiqueta select-->
+            <select id="dino-select">
+            <!--Etiqueta optgroup-->
+            <optgroup label="Estudios Universitarios">
+                <!--Etiqueta option-->
+                <option>Doctorado</option>
+                <option>Máster</option>
+                <option>Grado</option>
+            </optgroup>
+            <optgroup label="Ciclo Formativo">
+                <option>Grado Superior</option>
+                <option>Grado Medio</option>
+            </optgroup>
+            </select><br><br>
+            <label>Elige tu navegador favorito: </label>
+            <input list="browsers" name="myBrowser" />
+            <!--Etiqueta datalist-->
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Internet Explorer">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="Microsoft Edge">
+            </datalist><br><br>
+            <!--Etiqueta textarea-->
+            <textarea name="textarea" rows="10" cols="50">Escribe aquí tu mensaje</textarea>
+        </fieldset>  
+        <input type="submit" value="Enviar" />
+    </form><br><br>
+    
+    <!--Nuevo formulario con output-->
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="range" name="b" value="50" /> +
+            <input type="number" name="a" value="10" /> =
+            <output name="result">60</output>
+    </form>
+
+    <div></div>
+    <header>
+        <p>Representa un grupo de ayudas introductorias o de navegación. Puede contener
+        algunos elementos de encabezado, así como también un logo, un formulario de
+        búsqueda, un nombre de autor y otros componentes</p>
+    </header>
+
+    <nav>
+    <p>Representa una sección de una página cuyo propósito es proporcionar enlaces de
+        navegación, ya sea dentro del documento actual o a otros documentos</p>
+    </nav>
+
+    <section>
+        <p>Representa una sección genérica de un documento. Sirve para determinar qué
+        contenido corresponde a qué parte de un esquema. Piensa en el esquema como en
+        el índice de contenido de un libro; un tema común y subsecciones relacionadas</p>
+    </section>
+    
+    <aside>
+        <p>Representa una sección de una página que consiste en contenido que está
+        indirectamente relacionado con el contenido principal del documento. Estas
+        secciones son a menudo representadas como barras laterales o como inserciones y
+        contienen una explicación al margen como una definición de glosario, elementos
+        relacionados indirectamente, como publicidad, la biografía del autor, o en
+        aplicaciones web, la información de perfil o enlaces a blogs relacionados.</p>
+    </aside>
+
+    <footer>
+        <p>Permite definir un pie de página de un documento
+            Contiene información acerca de los datos de derechos de autor o enlaces a
+            documentos relacionados, iconos de las redes sociales.</p>
+        </footer>
+
+        
+
+
+
+</body>
+</html>
